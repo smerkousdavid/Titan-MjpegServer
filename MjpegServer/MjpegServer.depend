@@ -1,0 +1,244 @@
+# depslib dependency file v1.0
+1471028134 source:/home/smerkous/Documents/test/MjpegServer/main.cpp
+	"mjpgserver.h"
+
+1470636964 /home/smerkous/Documents/test/MjpegServer/crow.h
+	<string>
+	<unordered_map>
+	<iostream>
+	<algorithm>
+	<memory>
+	<boost/lexical_cast.hpp>
+	<boost/algorithm/string/predicate.hpp>
+	<boost/operators.hpp>
+	<vector>
+	<boost/algorithm/string/predicate.hpp>
+	<boost/functional/hash.hpp>
+	<unordered_map>
+	<cstdint>
+	<stdexcept>
+	<tuple>
+	<type_traits>
+	<cstring>
+	<functional>
+	<stdio.h>
+	<string.h>
+	<string>
+	<vector>
+	<iostream>
+	<vector>
+	<string>
+	<stdexcept>
+	<iostream>
+	<boost/asio.hpp>
+	<string>
+	<cstdio>
+	<cstdlib>
+	<ctime>
+	<iostream>
+	<sstream>
+	<boost/asio.hpp>
+	<deque>
+	<functional>
+	<chrono>
+	<thread>
+	<sys/types.h>
+	<BaseTsd.h>
+	<stddef.h>
+	<stdint.h>
+	<assert.h>
+	<stddef.h>
+	<ctype.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<string>
+	<unordered_map>
+	<boost/algorithm/string/trim.hpp>
+	<cstdint>
+	<utility>
+	<tuple>
+	<unordered_map>
+	<memory>
+	<boost/lexical_cast.hpp>
+	<vector>
+	<string>
+	<vector>
+	<fstream>
+	<iterator>
+	<functional>
+	<string>
+	<unordered_map>
+	<boost/algorithm/string.hpp>
+	<boost/tokenizer.hpp>
+	<algorithm>
+	<boost/asio.hpp>
+	<boost/algorithm/string/predicate.hpp>
+	<boost/lexical_cast.hpp>
+	<boost/array.hpp>
+	<atomic>
+	<chrono>
+	<vector>
+	<boost/date_time/posix_time/posix_time.hpp>
+	<boost/asio.hpp>
+	<boost/asio/ssl.hpp>
+	<cstdint>
+	<atomic>
+	<future>
+	<vector>
+	<memory>
+	<string>
+	<functional>
+	<memory>
+	<future>
+	<cstdint>
+	<type_traits>
+	<thread>
+
+1470263181 /usr/include/boost/algorithm
+
+1470263181 /usr/include/boost/tuple
+
+1470263181 /usr/include/boost/type_traits
+
+1470263181 /usr/include/boost/functional
+
+1470263181 /usr/include/boost/chrono
+
+1470263181 /usr/include/boost/thread
+
+1470263181 /usr/include/boost/utility
+
+1470263180 /usr/include/boost/iterator
+
+1470263181 /usr/include/boost/atomic
+
+1470640225 /home/smerkous/Documents/test/MjpegServer/server_http.hpp
+	<boost/asio.hpp>
+	<boost/regex.hpp>
+	<boost/algorithm/string/predicate.hpp>
+	<boost/functional/hash.hpp>
+	<unordered_map>
+	<thread>
+	<functional>
+	<iostream>
+	<sstream>
+
+1471028344 source:/home/smerkous/Documents/test/MjpegServer/mjpgserver.cpp
+	"mjpgserver.h"
+
+1471029028 /home/smerkous/Documents/test/MjpegServer/mjpgserver.h
+	<iostream>
+	<cstdlib>
+	<string>
+	<cstddef>
+	<opencv2/core/core.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/video.hpp>
+	<chrono>
+	<functional>
+	<boost/asio.hpp>
+	<boost/bind.hpp>
+	<boost/asio/io_service.hpp>
+	<boost/lexical_cast.hpp>
+	<boost/algorithm/string.hpp>
+	<boost/thread/thread.hpp>
+	<boost/thread/mutex.hpp>
+	<future>
+	<boost/chrono.hpp>
+	<unistd.h>
+
+1470682071 source:/home/smerkous/Documents/test/MjpegServer/connection.cpp
+	"connection.hpp"
+	<vector>
+	<boost/bind.hpp>
+	"request_handler.hpp"
+
+1470682093 /home/smerkous/Documents/test/MjpegServer/connection.hpp
+	<boost/asio.hpp>
+	<boost/array.hpp>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/enable_shared_from_this.hpp>
+	"reply.hpp"
+	"request.hpp"
+	"request_handler.hpp"
+	"request_parser.hpp"
+
+1470682177 /home/smerkous/Documents/test/MjpegServer/reply.hpp
+	<string>
+	<vector>
+	<boost/asio.hpp>
+	"header.hpp"
+
+1470681937 /home/smerkous/Documents/test/MjpegServer/header.hpp
+	<string>
+
+1470682209 /home/smerkous/Documents/test/MjpegServer/request.hpp
+	<string>
+	<vector>
+	"header.hpp"
+
+1470682283 /home/smerkous/Documents/test/MjpegServer/request_handler.hpp
+	<string>
+	<boost/noncopyable.hpp>
+
+1470682345 /home/smerkous/Documents/test/MjpegServer/request_parser.hpp
+	<boost/logic/tribool.hpp>
+	<boost/tuple/tuple.hpp>
+
+1470682093 source:/home/smerkous/Documents/test/MjpegServer/connection.hpp
+	<boost/asio.hpp>
+	<boost/array.hpp>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	<boost/enable_shared_from_this.hpp>
+	"reply.hpp"
+	"request.hpp"
+	"request_handler.hpp"
+	"request_parser.hpp"
+
+1470682394 /home/smerkous/Documents/test/MjpegServer/server.hpp
+	<boost/asio.hpp>
+	<string>
+	<vector>
+	<boost/noncopyable.hpp>
+	<boost/shared_ptr.hpp>
+	"connection.hpp"
+	"request_handler.hpp"
+
+1470682128 source:/home/smerkous/Documents/test/MjpegServer/mime_types.cpp
+	"mime_types.hpp"
+
+1470681976 /home/smerkous/Documents/test/MjpegServer/mime_types.hpp
+	<string>
+
+1470682157 source:/home/smerkous/Documents/test/MjpegServer/reply.cpp
+	"reply.hpp"
+	<string>
+	<boost/lexical_cast.hpp>
+
+1470682245 source:/home/smerkous/Documents/test/MjpegServer/request_handler.cpp
+	"request_handler.hpp"
+	<fstream>
+	<sstream>
+	<string>
+	<boost/lexical_cast.hpp>
+	"mime_types.hpp"
+	"reply.hpp"
+	"request.hpp"
+
+1470682324 source:/home/smerkous/Documents/test/MjpegServer/request_parser.cpp
+	"request_parser.hpp"
+	"request.hpp"
+
+1470682370 source:/home/smerkous/Documents/test/MjpegServer/server.cpp
+	"server.hpp"
+	<boost/thread/thread.hpp>
+	<boost/bind.hpp>
+	<boost/shared_ptr.hpp>
+	<vector>
+
+1470861555 /home/smerkous/Documents/test/MjpegServer/tcpserver.h
+
