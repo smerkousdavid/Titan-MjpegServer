@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1471028134 source:/home/smerkous/Documents/test/MjpegServer/main.cpp
+1471064578 source:/home/smerkous/Documents/test/MjpegServer/main.cpp
 	"mjpgserver.h"
 
 1470636964 /home/smerkous/Documents/test/MjpegServer/crow.h
@@ -101,9 +101,9 @@
 
 1470263181 /usr/include/boost/type_traits
 
-1470263181 /usr/include/boost/functional
+1471056242 /usr/include/boost/functional
 
-1470263181 /usr/include/boost/chrono
+1471056242 /usr/include/boost/chrono
 
 1470263181 /usr/include/boost/thread
 
@@ -124,10 +124,10 @@
 	<iostream>
 	<sstream>
 
-1471028344 source:/home/smerkous/Documents/test/MjpegServer/mjpgserver.cpp
+1471064680 source:/home/smerkous/Documents/test/MjpegServer/mjpgserver.cpp
 	"mjpgserver.h"
 
-1471029028 /home/smerkous/Documents/test/MjpegServer/mjpgserver.h
+1471029514 /home/smerkous/Documents/test/MjpegServer/mjpgserver.h
 	<iostream>
 	<cstdlib>
 	<string>

@@ -30,20 +30,17 @@ MjpgServer::MjpgServer(int port)
 
 MjpgServer::~MjpgServer()
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     std::cout << "Dismounting " << this->name << " server!";
     this->unint(); //Call the users soft unmount code
 }
 
 void MjpgServer::attach(cv::Mat (*pullframe)(void))
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->pullframe = pullframe; //Look at mainloop
 }
 
 void MjpgServer::setCapAttach(int value) //Set physical device pull with safety
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->cap.open(value);
     boost::this_thread::sleep_for(boost::chrono::milliseconds(250)); //Keeps from overreading
     this->capattach_in(); //Call default attach method
@@ -51,7 +48,6 @@ void MjpgServer::setCapAttach(int value) //Set physical device pull with safety
 
 void MjpgServer::setCapAttach(std::string value) //Set stream to pull from
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->cap.open(value);
     boost::this_thread::sleep_for(boost::chrono::milliseconds(250));
     this->capattach_in();
@@ -59,19 +55,16 @@ void MjpgServer::setCapAttach(std::string value) //Set stream to pull from
 
 void MjpgServer::setQuality(int quality)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->quality = quality;
 }
 
 int MjpgServer::getQuality()
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     return this->quality;
 }
 
 void MjpgServer::setFPS(int fps)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->controlfps = fps;
 }
 
@@ -83,45 +76,43 @@ int MjpgServer::getFPS()
 
 void MjpgServer::setResolution(int width, int height)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->resized[0] = width;
     this->resized[1] = height;
 }
 
 int* MjpgServer::getResolution()
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     return this->resized;
 }
 
 void MjpgServer::setSettle(int fps)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->settlefps = fps;
     std::cout << "New settle fps: " << this->settlefps << std::endl;
 }
 
 void MjpgServer::setMaxConnections(int connections)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->maxconnections = connections;
 }
 
 int MjpgServer::getMaxConnections()
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     return this->maxconnections;
 }
 
 int MjpgServer::getConnections()
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     return this->connections;
 }
 
 void MjpgServer::capattach_in()
 {
-    while(!cap.isOpened()) {} //Make sure we are connected before continuing
+    int tries = 0;
+    while(!cap.isOpened()) {
+        if(tries++ > this->maxfailpackets) break;
+        boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
+    } //Make sure we are connected before continuing
     this->setSettle((int) cap.get(cv::CAP_PROP_FPS));
     const auto proc = [this]() -> cv::Mat
     {
@@ -155,13 +146,11 @@ void MjpgServer::capattach_in()
 
 void MjpgServer::detacher(void (*detacher)(void))
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->unint = detacher;
 }
 
 void MjpgServer::setName(std::string new_name)
 {
-    boost::mutex::scoped_lock l(this->global_mutex);
     this->name = new_name;
 }
 

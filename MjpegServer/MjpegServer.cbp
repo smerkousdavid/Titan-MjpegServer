@@ -12,8 +12,39 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="/usr/include/boost" />
 				</Compiler>
+				<Linker>
+					<Add library="/usr/lib/x86_64-linux-gnu/libpthread.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_math_tr1.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_system.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_iostreams.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_regex.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_signals.so.1.54.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.55.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_locale.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_timer.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_atomic.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_chrono.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_core.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_imgcodecs.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_videoio.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_features2d.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_highgui.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_flann.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_objdetect.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_ml.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_shape.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_photo.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_videostab.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_superres.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_stitching.so.3.1.0" />
+					<Add directory="/usr/lib/x86_64-linux-gnu/" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/MjpegServer" prefix_auto="1" extension_auto="1" />
@@ -22,9 +53,38 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="/usr/include/boost" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libpthread.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_math_tr1.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_system.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_iostreams.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_regex.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_signals.so.1.54.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.55.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_locale.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_timer.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_atomic.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libboost_chrono.so" />
+					<Add library="/usr/local/lib/libopencv_imgproc.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_core.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_imgcodecs.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_videoio.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_features2d.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_highgui.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_flann.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_objdetect.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_ml.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_shape.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_photo.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_calib3d.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_videostab.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_superres.so.3.1.0" />
+					<Add library="/usr/local/lib/libopencv_stitching.so.3.1.0" />
+					<Add directory="/usr/lib/x86_64-linux-gnu/" />
 				</Linker>
 			</Target>
 		</Build>
@@ -33,6 +93,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="mjpgserver.cpp" />
+		<Unit filename="mjpgserver.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
